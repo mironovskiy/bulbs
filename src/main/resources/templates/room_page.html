@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Rooms</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="/resources/css/style.css" rel="stylesheet">
+        <script src="/resources/js/js.js"></script>
+    </head>
+    <body id="body" onload="loadRoomPage(); load()">
+
+    <input type="hidden" id="light" th:value="${roomData.isLightOn()}">
+    <input type="hidden" id="nameOfRoom" th:value="${roomData.getName()}">
+
+    <div class="items">
+        <div class="item">
+            <img src="/resources/icons/yellow.png" alt="" onclick="changeLight()" id="bulb">
+        </div>
+    </div>
+    </body>
+    <footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="/resources/js/main.js"></script>
+    </footer>
+</html>
